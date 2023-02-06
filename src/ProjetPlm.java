@@ -37,7 +37,11 @@ public class ProjetPlm {
 			listPlanes.put(5, plane5);
 			// Affichage du contenu des tableaux
 		for(int i:listPlanes.keySet()) {
-		System.out.println(i+"= "+Arrays.toString(listPlanes.get(i)));
+	//	System.out.println(i+"= "+listPlanes.get(i));
+			for(String str:listPlanes.get(i)) {
+				System.out.print(str);
+			}
+			System.out.println("");
 		}
 		
 		Scanner scan = new Scanner(System.in);
@@ -51,7 +55,7 @@ public class ProjetPlm {
 		for(int query : listPlanes.keySet()) { // Effectue la recherche dans le tableau
 			if (listPlanes.get(query) != null) { // A faire : adapter la variable de recherche
 				// pour qu'elle parcoure la hashmap (int/string) et qu'elle retourne le mot clé cherché
-		System.out.println("Résultats de la recherche : "+listPlanes.get(query));
+		System.out.println("Résultats de la recherche : "+Arrays.toString(listPlanes.get(query))); // Retourne le résultat de la recherche
 
 			}	else {
 			System.out.println("Aucun élément ne correspond à votre recherche.");	
